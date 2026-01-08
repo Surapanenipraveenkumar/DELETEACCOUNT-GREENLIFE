@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account - Home Gardening with AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            width: 400px;
+            text-align: center;
+        }
+        input, textarea {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #e53935;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #c62828;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Delete Your Account</h2>
+        <p>
+            We’re sorry to see you go 🌱  
+            Submit the form below to request deletion of your
+            <strong>Home Gardening with AI</strong> account and related data.
+        </p>
+
+        <form id="deleteForm" onsubmit="return handleDelete(event)">
+            <input type="text" id="name" placeholder="Your full name" required>
+            <input type="email" id="email" placeholder="Registered email address" required>
+            <input type="password" id="password" placeholder="Account password" required>
+            <textarea id="reason" placeholder="Reason for leaving (optional)"></textarea>
+            <button type="submit">Request Account Deletion</button>
+        </form>
+    </div>
+
+    <script>
+        function handleDelete(event) {
+            event.preventDefault();
+            document.body.innerHTML = `
+                <h1 style="
+                    text-align: center;
+                    margin-top: 20%;
+                    font-family: Arial, sans-serif;
+                    color: #2e7d32;">
+                    Your account deletion request has been received 🌿<br>
+                    We will permanently delete your account and gardening data shortly.
+                </h1>
+            `;
+        }
+    </script>
+</body>
+</html>
